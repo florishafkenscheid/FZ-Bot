@@ -40,8 +40,7 @@ class Bot:
             else:
                 await interaction.response.send_message("This could take a while, please hold.")
                 await self.fz_client.start_instance()
-                await interaction.edit_original_response(content=f"Successfully starting instance.")
-                await asyncio.sleep(30)
+                await asyncio.sleep(15)
                 await interaction.edit_original_response(content=f"Successfully started instance on IP: {self.fz_client.server_address}")
 
 
